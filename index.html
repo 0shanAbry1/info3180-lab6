@@ -20,8 +20,8 @@
     
     <body ng-app="myShoppingList">
         <div class="header">
-          <div class="container">
-            <h1>My Shopping List ^_^</h1>
+          <div class="container col-md-offset-5">
+            <h3>SHOPPING LISTER</h3>
           </div>
         </div>
             
@@ -29,19 +29,18 @@
             <div class="container">
                 <ul class="list-group">
                     <li ng-repeat="x in products" class="list-group-item">{{x}}
-                    <span></span>
-                    <span ng-click="removeItem($index)" class="badge" style="cursor:pointer">x</span>
+                    <span ng-click="removeItem($index)" class="badge" style="cursor:pointer; background-color:#f44542">REMOVE</span>
                     </li>
                 </ul>
                 
-                <div class="col-lg-6">
+                <div class="col-md-6 col-md-offset-3" >
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Enter item name" ng-model="addMe">
                         <span class="input-group-btn">
-                            <button ng-click="addItem()">Add</button>
+                            <button ng-click="addItem()" class="btn btn-success" type="button">ADD</button>
                         </span>
                     </div>    
-                    <p style="color:red">{{ errortext }}</p>
+                    <p style="color:#f44542">{{ errortext }}</p>
                 </div>
             </div>
         </div>
